@@ -5,7 +5,7 @@ PSQL="psql -X --username=freecodecamp --dbname=periodic_table -t --no-align -c"
 FIND_ELEMENT() {
     if [[ -n $1 ]]
     then
-        # Check if argument is atomic number, symbol, or name
+        # Check if argument is atomic number, symbol, or name and retrieve atomic number
         ATOMIC_NUMBER=$($PSQL "SELECT atomic_number FROM elements WHERE symbol='$1' OR name='$1' OR atomic_number::text='$1';")
         # If no element found in database
         if [[ -z $ATOMIC_NUMBER ]]
