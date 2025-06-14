@@ -1,6 +1,6 @@
 #! /bin/bash
 
-PSQL="psql -X --username=freecodecamp --dbname=periodic_table -t --tuples-only --no-align -c"
+PSQL="psql -X --username=freecodecamp --dbname=periodic_table -t --no-align -c"
 
 FIND_ELEMENT() {
     if [[ -n $1 ]]
